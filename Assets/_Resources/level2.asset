@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c009b65b8e7f02940be36743c60c21ae, type: 3}
+  m_Name: level2
+  m_EditorClassIdentifier: 
+  rows: 5
+  columns: 8
+  totalColors: 4
+  spawnHeight: 2
+  dropDuration: 0.3
+  neighborMatchProbability: 0.8
+  conditionA: 4
+  conditionB: 7
+  conditionC: 9
