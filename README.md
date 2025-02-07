@@ -7,7 +7,7 @@
 
 This project is a tile-matching game featuring a collapse/blast mechanic. Players can click on groups of the same-colored blocks to remove them from the board. The vacant cells are filled by blocks above, and new blocks drop from the top. The game includes dynamic icon changes based on group sizes and ensures no deadlocks occur by optimizing color distribution.
 
-#Features
+Features
 - Clickable blocks with collapse/blast mechanics
 - Dynamic block icons that change based on group size
 - Smooth animations for block destruction and falling
