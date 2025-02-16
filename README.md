@@ -1,4 +1,4 @@
-# GoodJob_Games_Case
+# Good Job Games Case
 
 
 ![Oyun Demo GIF'i](gif2.gif)
