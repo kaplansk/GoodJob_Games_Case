@@ -77,7 +77,10 @@ public class BoardManager : MonoBehaviour
         GameObject blockObj = blockPool.GetBlock();
         blockObj.transform.SetParent(transform);
 
-        Vector3 startPosition = new Vector3(col, spawnHeight, 0);
+
+        float spacing = 0.9f; // BLOKLARI SIKIÞTIRMAK ÝÇÝN YENÝ EKLENEN DEÐÝÞKEN!
+
+        Vector3 startPosition = new Vector3(col * spacing, spawnHeight * spacing, 0);
         blockObj.transform.localPosition = startPosition;
 
         Block block = blockObj.GetComponent<Block>();
@@ -95,13 +98,16 @@ public class BoardManager : MonoBehaviour
         boardBlocks[row, col] = block;
         block.UpdateIcon(1);
 
+        block.SetSortingOrder(rows, row); //1
         StartCoroutine(DropBlock(block, row, col));
     }
 
     private IEnumerator DropBlock(Block block, int row, int col)
     {
         Vector3 startPos = block.transform.localPosition;
-        Vector3 targetPos = new Vector3(col, -row, 0);
+        float spacing = 0.9f; // BLOKLARI SIKIÞTIRMAK ÝÇÝN EKLEDÝK!
+
+        Vector3 targetPos = new Vector3(col * spacing, -row * spacing, 0);
         float elapsedTime = 0f;
 
         while (elapsedTime < dropDuration)
@@ -142,7 +148,10 @@ public class BoardManager : MonoBehaviour
     private IEnumerator MoveBlockDown(Block block, int newRow, int col)
     {
         Vector3 startPosition = block.transform.localPosition;
-        Vector3 targetPosition = new Vector3(col, -newRow, 0);
+        float spacing = 0.9f; // BLOKLARI SIKIÞTIRMAK ÝÇÝN EKLEDÝK!
+
+        Vector3 targetPosition = new Vector3(col * spacing, -newRow * spacing, 0);
+        
         float elapsedTime = 0f;
 
         while (elapsedTime < dropDuration)
@@ -152,6 +161,8 @@ public class BoardManager : MonoBehaviour
             yield return null;
         }
         block.transform.localPosition = targetPosition;
+
+        block.SetSortingOrder(rows, newRow);
     }
 
     private void RefreshBlockIcons()

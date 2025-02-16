@@ -11,11 +11,12 @@ public class Block : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collapseManager = FindObjectOfType<CollapseManager>();
+        collapseManager = FindFirstObjectByType<CollapseManager>();
     }
 
     private void Start()
     {
+        
         UpdateIcon(1);
     }
 
@@ -59,4 +60,10 @@ public class Block : MonoBehaviour
 
         Destroy(gameObject);
     }
+    public void SetSortingOrder(int totalRows, int row)
+    {
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sortingOrder = totalRows - row;
+    }
+
 }

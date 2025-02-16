@@ -17,7 +17,7 @@ MonoBehaviour:
   totalColors: 6
   spawnHeight: 2
   dropDuration: 0.3
-  neighborMatchProbability: 0.8
+  neighborMatchProbability: 0.7
   conditionA: 4
   conditionB: 7
   conditionC: 9

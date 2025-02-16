@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c009b65b8e7f02940be36743c60c21ae, type: 3}
   m_Name: level2
   m_EditorClassIdentifier: 
-  rows: 5
-  columns: 8
-  totalColors: 4
+  rows: 13
+  columns: 13
+  totalColors: 6
   spawnHeight: 2
   dropDuration: 0.3
   neighborMatchProbability: 0.8
